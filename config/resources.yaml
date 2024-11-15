@@ -1,0 +1,6 @@
+
+###
+# Assembly rules
+###
+flye:
+  threads: 80

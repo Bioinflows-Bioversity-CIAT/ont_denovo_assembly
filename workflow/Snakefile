@@ -1,0 +1,26 @@
+# Main entrypoint of the workflow.
+from datetime import datetime
+
+
+start_time = datetime.now()
+print(start_time)
+
+# resources params
+include : "rules/common.smk"
+
+
+rule all:
+	input:
+		quast = expand(["{base_dir}/scaffolding/{sample}/linkage_map/{sample}_markers.sam"],
+			base_dir = "/opt/bean_fast/ONT",
+			sample = ["INB_841"])
+
+
+include : "rules/raw_reads_processing.smk"
+include : "rules/assembly.smk"
+include : "rules/polishing.smk"
+include : "rules/purge_assembly.smk"
+include : "rules/decontamination.smk"
+include : "rules/quality_asessment.smk"
+include : "rules/scaffolding.smk"
+

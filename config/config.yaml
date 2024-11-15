@@ -1,0 +1,27 @@
+sample_units: config/sample_units.txt
+base_wd: /home/scruz/pipelines/denovo_assembly/
+resources_config: config/resources.yaml
+base_dir: /opt/bean_fast/ONT
+organism:
+  genome_size: 140000000
+
+medaka:
+  model: r1041_e82_400bps_hac_v4.3.0
+
+
+target_taxa_id: Streptophyta
+
+taxdump_db: /opt/InterspecificCommonBeanDenovoGenomeAssembly/5.Others/references/taxdump
+nt_db: /opt/InterspecificCommonBeanDenovoGenomeAssembly/5.Others/references/BLAST/nt/nt
+
+
+quast_ref: /opt/InterspecificCommonBeanDenovoGenomeAssembly/5.Others/references/genomes/Pvulgaris/UI-111/v1.1/assembly/PvulgarisUI111_534_v1.0.fa
+BUSCO: /home/scruz/software/busco-5.4.3/bin/busco
+busco_db : /opt/InterspecificCommonBeanDenovoGenomeAssembly/5.Others/references/BUSCO/fabales_odb10/
+
+
+read_depth_path: /home/scruz/workflows/denovo_assembly/config/read_depths_purge.txt
+
+linkage_map:
+  map: resources/SR_F2_linkage_map/SR_F2_linkage_map.tsv
+  markers: resources/SR_F2_linkage_map/SR_F2_markers.fasta

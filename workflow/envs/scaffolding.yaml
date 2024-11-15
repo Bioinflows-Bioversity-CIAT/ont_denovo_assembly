@@ -1,0 +1,12 @@
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - biopython=1.70
+  - numpy
+  - deap
+  - networkx
+  - matplotlib
+  - pip
+    - jcvi
